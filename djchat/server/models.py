@@ -14,7 +14,7 @@ class Server(models.Model):
     name = models.CharField(max_length=255)
     owner = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="server_owner")
-    catgory = models.ForeignKey(
+    category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name="server_category")
     description = models.CharField(max_length=250, null=True)
     member = models.ManyToManyField(settings.AUTH_USER_MODEL)
